@@ -1,0 +1,207 @@
+ html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  font-weight: bold;
+  line-height: 60px;
+}
+
+h2 {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+.logo img {
+  width: 195px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+.hero {
+  background: #fef3eb;
+  border-radius: 8px;
+}
+
+.hero-block {
+  display: flex;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #fbe9d9;
+}
+
+.hero .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 658px;
+  height: 500px;
+  border-radius: 8%;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding-left: 100px;
+  padding-right: 20px;
+}
+
+.hero img {
+  height: 803px;
+}
+
+.about-school img{
+  width: 330px;
+}
+
+.button {
+  background: #ff4a26;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.school-levels > div {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: #f5664a;
+  border: 5px solid #fef3eb;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.school-advantages {
+  background: #f5664a;
+  color: white;
+}
+
+.advantage-icon img {
+  width: 80px;
+  height: auto;
+  margin-right: 42px;
+}
+
+.school-advantages .highlight {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.advantage-text {
+  padding: 15px;
+}
+
+.advantage-text h4{
+  font-weight: bold;
+}
+
+.nav-tabs {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 20px 65px;
+  color: #f5664a;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #f5664a;
+  border-color: #f5664a;
+  color: #fff;
+}
+
+.tab-pane {
+  padding: 20px;
+  border-radius: 0.375rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-pane p {
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ff7043;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .button {
+    width: 100%;
+  }
+  .school-levels > div {
+    margin-bottom: 1rem;
+  }
+  form .form-control,
+  form .form-select {
+    width: 100%;
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}
