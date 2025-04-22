@@ -324,10 +324,9 @@ h2::before {
 .socials {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .socials a {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,6 +352,7 @@ h2::before {
 }
 .socials a:nth-child(3) {
   background-color: #0088cc; /* Telegram */
+}
 
 footer {
   text-align: center;
