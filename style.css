@@ -185,6 +185,30 @@ h2::before {
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
+.form-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-title::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  margin-right: 15px;
+  box-shadow: 0 0 0 3px #fff inset, 0 0 0 3px #f5f5f5;
+}
+
+>>>>>>> 6ea6ef966efd9876380c04e78a3fda144b4184db
 .custom-input,
 .custom-select {
   border: 2px solid var(--accent-color);
@@ -244,6 +268,14 @@ h2::before {
 }
 
 @media (max-width: 576px) {
+<<<<<<< HEAD
+=======
+  .form-title {
+    font-size: 28px;
+    flex-direction: column;
+    gap: 10px;
+  }
+>>>>>>> 6ea6ef966efd9876380c04e78a3fda144b4184db
   .form-wrapper {
     padding: 20px;
     margin: 20px;
