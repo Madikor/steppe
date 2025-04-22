@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 	<header class="py-3">
 		<div class="container">
@@ -38,8 +40,10 @@
 				<div class="hero-block">
 					<div class="col-6 d-flex align-items-center">
 						<div class="hero-text">
-							<h1>Современное <br><span style="color: #ff4a26">образование</span><br> для <span style="color: #ff4a26">будущих лидеров</span></h1>
-							<p>Мы не просто учим – мы создаем будущее, в котором каждый ребёнок уверен в своих силах!</p>
+							<h1>Современное <br><span class="m-color">образование</span><br> для <span
+									class="m-color">будущих лидеров</span></h1>
+							<p>Мы не просто учим – мы создаем будущее, в котором каждый ребёнок уверен в своих силах!
+							</p>
 							<button class="button" id="scroll-to-form">Оставить заявку</button>
 						</div>
 					</div>
@@ -59,9 +63,14 @@
 				<div class="col-8">
 					<h2>О ШКОЛЕ</h2>
 					<div class="about-text">
-						<p><strong>Steppe School</strong> — это образовательная экосистема, где сочетаются фундаментальные науки, современные технологии, инженерные разработки, программирование и предпринимательство.</p>
-						<p>Наши ученики получают не только глубокие теоретические знания, но и востребованные практические навыки, работая в IT-лабораториях и участвуя в реальных технологических проектах.</p>
-						<p>Мы создаём среду, которая воспитывает в учениках дух предпринимательства, развивает креативное мышление, и командную</p>
+						<p><strong>Steppe School</strong> — это образовательная экосистема, где сочетаются
+							фундаментальные науки, современные технологии, инженерные разработки, программирование и
+							предпринимательство.</p>
+						<p>Наши ученики получают не только глубокие теоретические знания, но и востребованные
+							практические навыки, работая в IT-лабораториях и участвуя в реальных технологических
+							проектах.</p>
+						<p>Мы создаём среду, которая воспитывает в учениках дух предпринимательства, развивает
+							креативное мышление, и командную</p>
 					</div>
 				</div>
 				<div class="col-4 text-center">
@@ -137,86 +146,193 @@
 		</div>
 	</section>
 
-	<section class="py-5" style="background:#fceae6;">
+	<section class="schools py-5" style="background:#fceae6;">
 		<div class="container">
 			<ul class="nav nav-tabs" id="schoolTabs" role="tablist">
 				<li class="nav-item" role="presentation">
-					<button class="nav-link active" id="primary-tab" data-bs-toggle="tab" data-bs-target="#primary" type="button" role="tab" aria-controls="primary" aria-selected="true">
+					<button class="nav-link active" id="primary-tab" data-bs-toggle="tab" data-bs-target="#primary"
+						type="button" role="tab" aria-controls="primary" aria-selected="true">
 						Primary School
 					</button>
 				</li>
 				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="secondary-tab" data-bs-toggle="tab" data-bs-target="#secondary" type="button" role="tab" aria-controls="secondary" aria-selected="false">
+					<button class="nav-link" id="secondary-tab" data-bs-toggle="tab" data-bs-target="#secondary"
+						type="button" role="tab" aria-controls="secondary" aria-selected="false">
 						Secondary School
 					</button>
 				</li>
 				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="high-tab" data-bs-toggle="tab" data-bs-target="#high" type="button" role="tab" aria-controls="high" aria-selected="false">
+					<button class="nav-link" id="high-tab" data-bs-toggle="tab" data-bs-target="#high" type="button"
+						role="tab" aria-controls="high" aria-selected="false">
 						High School
 					</button>
 				</li>
 			</ul>
 			<div class="tab-content mt-3" id="schoolTabsContent">
 				<div class="tab-pane fade show active" id="primary" role="tabpanel" aria-labelledby="primary-tab">
-					<h3>Primary School</h3>
-					<p>Welcome to Primary School! Here you will find a list of subjects, schedules, and fun activities:</p>
-					<ul>
-						<li>Math</li>
-						<li>Science</li>
-						<li>Art</li>
-						<li>Sports</li>
-					</ul>
-					<p>Our goal is to inspire young minds to explore the world!</p>
+					<div class="row">
+						<div class="col-6">
+							<h3 class="fw-bold">1 - 6 класс</h3>
+							<p>Государственный стандарт обучения</p>
+							<ul>
+								<li>Углубленное изучение матемики</li>
+								<li>логика / олимпиадная математика</li>
+								<li>английский язык / Art & Reading</li>
+								<li>кружки (шахматы, робототехника, осмысленоое чтение и др.)</li>
+							</ul>
+						</div>
+						<div class="col-6">
+							<h3 class="fw-bold text-center">Программа РФМШ</h3>
+							<p class="text-center">Методическое сопровождение РФМШ</p>
+							<ul>
+								<li>переподготовка кадров</li>
+								<li>семинары для начальной школы</li>
+							</ul>
+							<div class="cost text-center">
+								<h3 class="fw-bold">Стоимость обучения</h3>
+								<p>1-4 класс - 2 500 000 тенге</p>
+								<p>5-6 класс - 2 800 000 тенге</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-pane fade" id="secondary" role="tabpanel" aria-labelledby="secondary-tab">
-					<h3>Secondary School</h3>
-					<p>In Secondary School, we focus on helping students build a strong foundation in core subjects:</p>
-					<ul>
-						<li>Mathematics</li>
-						<li>Literature</li>
-						<li>History</li>
-						<li>Foreign Languages</li>
-					</ul>
-					<p>Get ready to tackle more challenging coursework and extracurricular activities!</p>
+					<div class="row">
+						<div class="col-6">
+							<h3 class="fw-bold">7 - 9 класс</h3>
+							<p>Государственный стандарт обучения</p>
+							<ul>
+								<li>Программирование на Python, C++, Java</li>
+								<li>Углубленное изучение математики и английского языка</li>
+								<li>Робототехника</li>
+								<li>Творчество</li>
+								<li>Кружки (soft skills, навыки презентаций, предпринимательство и др.)</li>
+							</ul>
+						</div>
+						<div class="col-6">
+							<h3 class="fw-bold text-center">Дополнительно</h3>
+							<ul>
+								<li>Участие в олимпиадах и контестах по программированию</li>
+								<li>Лекции и семинары от работников крупных компаний</li>
+								<li>Профориентационные сессии (посещение заводов / организаций и пр)</li>
+							</ul>
+							<div class="cost text-center">
+								<h3 class="fw-bold">Стоимость обучения</h3>
+								<p>3 000 000 тенге</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-pane fade" id="high" role="tabpanel" aria-labelledby="high-tab">
-					<h3>High School</h3>
-					<p>High School is all about preparing for your future. Whether you're thinking about college, career paths, or further studies, we provide support in:</p>
-					<ul>
-						<li>Advanced Science & Math</li>
-						<li>College Preparatory Courses</li>
-						<li>Career Exploration</li>
-						<li>Extracurricular Opportunities</li>
-					</ul>
-					<p>Get ready to take the next steps toward your dreams!</p>
+					<div class="row">
+						<div class="col-4">
+							<h3 class="fw-bold">10-11 класс</h3>
+							<p>Государственный стандарт обучения</p>
+							<ul>
+								<li>AP program + профориентация</li>
+								<li>SAT</li>
+								<li>IELTS</li>
+							</ul>
+						</div>
+						<div class="col-4">
+							<h3 class="fw-bold">11 класс</h3>
+							<p>Государственный стандарт обучения</p>
+							<ul>
+								<li>Основы программирования</li>
+								<li>Веб-разработка</li>
+								<li>Анализ данных и большие данные</li>
+								<li>Алгоритмы и структуры данных</li>
+								<li>Машинное обучение и искусственный интеллект</li>
+								<li>Сетевые технологии</li>
+								<li>Информационная безопасность</li>
+								<li>Мобильная разработка</li>
+								<li>Облачные технологии</li>
+								<li>UI / UX</li>
+							</ul>
+						</div>
+						<div class="col-4">
+							<h3 class="fw-bold text-center">Дополнительно</h3>
+							<ul>
+								<li>Soft skills</li>
+								<li>Предпринимательство</li>
+								<li>Проектная деятельность и хакатоны</li>
+								<li>Критическое мышление</li>
+								<li>Навыки презентаций</li>
+							</ul>
+							<div class="cost text-center">
+								<h3 class="fw-bold">Стоимость обучения</h3>
+								<p>3 000 000 тенге</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
 	<section class="py-5" id="registration">
 		<div class="container">
 			<h2>ПОДАТЬ ЗАЯВКУ</h2>
-			<form class="row g-3">
-				<div class="col-md-6"><input type="text" class="form-control" placeholder="ФИО родителя"></div>
-				<div class="col-md-6"><input type="text" class="form-control" placeholder="Телефон"></div>
-				<div class="col-md-6"><input type="email" class="form-control" placeholder="E-mail"></div>
-				<div class="col-md-6"><input type="text" class="form-control" placeholder="Имя ребенка"></div>
-				<div class="col-md-6"><input type="text" class="form-control" placeholder="Возраст ребенка"></div>
-				<div class="col-md-6"><input type="text" class="form-control" placeholder="Язык обучения"></div>
-				<div class="col-md-6">
-					<select class="form-select">
-						<option>Выберите класс</option>
-						<option>10 класс</option>
-						<option>11 класс</option>
-					</select>
-				</div>
-				<div class="col-12">
-					<button class="button" type="submit">Отправить заявку</button>
-				</div>
-			</form>
-			<p class="text-danger mt-2" style="font-size: 0.9em;">Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.</p>
+
+			<div class="form-wrapper">
+				<form id="application-form">
+			
+				  <div class="row mb-3">
+					<div class="col-12">
+					  <input type="text" name="parent" class="form-control custom-input" placeholder="ФИО родителя" required>
+					</div>
+				  </div>
+			
+				  <div class="row mb-3">
+					<div class="col-md-6 mb-3 mb-md-0">
+					  <input type="tel" name="phone" class="form-control custom-input" placeholder="Телефон" required>
+					</div>
+					<div class="col-md-6">
+					  <input type="email" name="email" class="form-control custom-input" placeholder="E-mail" required>
+					</div>
+				  </div>
+			
+				  <div class="row mb-3">
+					<div class="col-md-6 mb-3 mb-md-0">
+					  <input type="text" name="child" class="form-control custom-input" placeholder="Имя ребенка" required>
+					</div>
+					<div class="col-md-6">
+					  <input type="text" name="age" class="form-control custom-input" placeholder="Возраст ребенка" required>
+					</div>
+				  </div>
+			
+				  <div class="row mb-3">
+					<div class="col-md-6 mb-3 mb-md-0">
+					  <select name="language" class="form-select custom-select" required>
+						<option selected disabled>Язык обучения</option>
+						<option value="Казахский">Казахский</option>
+						<option value="Русский">Русский</option>
+					  </select>
+					</div>
+					<div class="col-md-6">
+					  <select name="class" class="form-select custom-select" required>
+						<option selected disabled>Выберите класс</option>
+						<option value="7">7 класс</option>
+						<option value="8">8 класс</option>
+						<option value="9">9 класс</option>
+						<option value="10">10 класс</option>
+					  </select>
+					</div>
+				  </div>
+			
+				  <div class="note">
+					Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.
+				  </div>
+			
+				  <div class="text-center mt-4">
+					<button type="submit" class="btn btn-submit">Отправить заявку</button>
+				  </div>
+				</form>
+			
+				<div class="loader" id="loader"></div>
+				<div class="success-message" id="success-message">Заявка успешно отправлена!</div>
+			  </div>
 		</div>
+
 	</section>
 
 	<section class="py-5" id="contacts" style="background:#fff0eb;">
@@ -224,21 +340,22 @@
 			<h2>НАШИ КОНТАКТЫ</h2>
 			<p><strong>SILICON STEPPE SCHOOL</strong><br>
 				Проспект Республики, 58/1а<br>г. Астана, Казахстан</p>
-				<p><strong>E-mail:</strong> info@steppe.edu.kz</p>
-				<p><strong>Автобус:</strong> 37<br>Остановка: Астана технопарк</p>
-				<img src="your-map-image.jpg" alt="Карта" class="img-fluid">
-			</div>
-		</section>
+			<p><strong>E-mail:</strong> info@steppe.edu.kz</p>
+			<p><strong>Автобус:</strong> 37<br>Остановка: Астана технопарк</p>
+			<img src="your-map-image.jpg" alt="Карта" class="img-fluid">
+		</div>
+	</section>
 
-		<footer>
-			© Silicon Steppe School
-		</footer>
+	<footer>
+		© Silicon Steppe School
+	</footer>
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script>
-			document.getElementById('scroll-to-form').addEventListener('click', function () {
-				document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
-			});
-		</script>
-	</body>
-	</html>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		document.getElementById('scroll-to-form').addEventListener('click', function () {
+			document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
+		});
+	</script>
+</body>
+
+</html>
