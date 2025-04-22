@@ -282,6 +282,78 @@ h2::before {
   }
 }
 
+.school-name {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.contact-block {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.contact-info strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.bus-section {
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bus-number {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border: 1px solid #6c757d;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.socials {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.socials a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.socials a + a {
+  margin-left: 10px;
+}
+.socials a:hover {
+  transform: translateY(-2px);
+}
+.socials a:nth-child(1) {
+  background-color: #25d366; /* WhatsApp */
+}
+.socials a:nth-child(2) {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.socials a:nth-child(3) {
+  background-color: #0088cc; /* Telegram */
+
 footer {
   text-align: center;
   padding: 1rem;
