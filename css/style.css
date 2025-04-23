@@ -33,25 +33,82 @@ header {
   background: white;
   border-bottom: 1px solid #ddd;
 }
+
 .logo img {
-  width: 195px;
+  width: 160px;
+  max-width: 100%;
 }
+
 nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   margin: 0 1rem;
 }
+
+.button {
+  background-color: var(--accent-color, #f5664a);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.burger {
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu nav a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 130px;
+  }
+}
+
+
 .hero {
   background: #fef3eb;
   border-radius: 8px;
+  padding: 30px 0;
 }
 
 .hero-block {
   display: flex;
-  -webkit-border-radius: 40px;
+  flex-wrap: wrap;
   border-radius: 40px;
   background-color: #fbe9d9;
+  overflow: hidden;
 }
 
 .hero .img {
@@ -65,12 +122,41 @@ nav a {
 }
 
 .hero-text {
-  padding-left: 100px;
-  padding-right: 20px;
+  padding: 60px 40px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .hero img {
   height: 803px;
+}
+
+@media (max-width: 768px) {
+  .hero-block {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero .img {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 .about-school img{
@@ -177,6 +263,48 @@ h2::before {
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  .nav-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .nav-tabs .nav-link {
+    font-size: 24px;
+    padding: 15px 40px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .tab-pane {
+    padding: 15px;
+  }
+
+  .tab-pane .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .schools .cost {
+    margin-top: 30px;
+  }
+
+  .schools .cost p {
+    font-size: 18px;
+  }
+}
+
+
 .form-wrapper {
   max-width: 700px;
   margin: 50px auto;
@@ -185,30 +313,6 @@ h2::before {
   position: relative;
 }
 
-<<<<<<< HEAD
-=======
-.form-title {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form-title::before {
-  content: '';
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: red;
-  display: inline-block;
-  margin-right: 15px;
-  box-shadow: 0 0 0 3px #fff inset, 0 0 0 3px #f5f5f5;
-}
-
->>>>>>> 6ea6ef966efd9876380c04e78a3fda144b4184db
 .custom-input,
 .custom-select {
   border: 2px solid var(--accent-color);
@@ -268,14 +372,6 @@ h2::before {
 }
 
 @media (max-width: 576px) {
-<<<<<<< HEAD
-=======
-  .form-title {
-    font-size: 28px;
-    flex-direction: column;
-    gap: 10px;
-  }
->>>>>>> 6ea6ef966efd9876380c04e78a3fda144b4184db
   .form-wrapper {
     padding: 20px;
     margin: 20px;

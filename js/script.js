@@ -34,4 +34,9 @@ document.getElementById("application-form").addEventListener("submit", async fun
       loader.style.display = "none";
     }
   });
+
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+  }
   

@@ -15,43 +15,56 @@
 	<header class="py-3">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-6 ">
+				<div class="col-6">
 					<div class="logo">
-						<img src="img/LogoSSS.png" alt="placeholder+image">
+						<img src="img/LogoSSS.png" alt="logo">
 					</div>
 				</div>
-				<div class="col-6">
-					<div class="menu d-flex justify-content-end align-items-center">
+				<div class="col-6 d-flex justify-content-end align-items-center">
+					<div class="menu d-none d-md-flex align-items-center">
 						<nav>
 							<a href="#about">О ШКОЛЕ</a>
 							<a href="#advantages">ПРЕИМУЩЕСТВА</a>
 							<a href="#registration">РЕГИСТРАЦИЯ</a>
 							<a href="#contacts">КОНТАКТЫ</a>
 						</nav>
-						<button class="button">RU</button>
+						<button class="button ms-3">RU</button>
+					</div>
+
+					<div class="d-md-none d-flex align-items-center">
+						<button class="button me-4">RU</button>
+						<div class="burger" onclick="toggleMobileMenu()">
+							<i class="fas fa-bars fa-lg"></i>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="mobile-menu d-md-none" id="mobileMenu">
+			<nav>
+				<a href="#about">О ШКОЛЕ</a>
+				<a href="#advantages">ПРЕИМУЩЕСТВА</a>
+				<a href="#registration">РЕГИСТРАЦИЯ</a>
+				<a href="#contacts">КОНТАКТЫ</a>
+			</nav>
 		</div>
 	</header>
 
 	<section class="hero">
 		<div class="container">
-			<div class="row">
-				<div class="hero-block">
-					<div class="col-6 d-flex align-items-center">
-						<div class="hero-text">
-							<h1>Современное <br><span class="m-color">образование</span><br> для <span
-									class="m-color">будущих лидеров</span></h1>
-							<p>Мы не просто учим – мы создаем будущее, в котором каждый ребёнок уверен в своих силах!
-							</p>
-							<button class="button" id="scroll-to-form">Оставить заявку</button>
-						</div>
+			<div class="row hero-block">
+				<div class="col-md-6 col-12 d-flex align-items-center">
+					<div class="hero-text">
+						<h1>Современное <br><span class="m-color">образование</span><br> для <span
+								class="m-color">будущих лидеров</span></h1>
+						<p>Мы не просто учим – мы создаем будущее, в котором каждый ребёнок уверен в своих силах!</p>
+						<button class="button" id="scroll-to-form">Оставить заявку</button>
 					</div>
-					<div class="col-6">
-						<div class="img">
-							<img src="img/Изображение 3.jpg" alt="student">
-						</div>
+				</div>
+				<div class="col-md-6 col-12">
+					<div class="img">
+						<img src="img/Изображение 3.jpg" alt="student">
 					</div>
 				</div>
 			</div>
@@ -61,7 +74,7 @@
 	<section class="about-school py-5" id="about">
 		<div class="container">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-8 col-12">
 					<h2>О ШКОЛЕ</h2>
 					<div class="about-text">
 						<p><strong>Steppe School</strong> — это образовательная экосистема, где сочетаются
@@ -74,7 +87,7 @@
 							креативное мышление, и командную</p>
 					</div>
 				</div>
-				<div class="col-4 text-center">
+				<div class="col-4 col-12 text-center">
 					<img src="img/Изображение 2.jpg" alt="ученица" class="rounded-4">
 				</div>
 			</div>
@@ -276,62 +289,67 @@
 
 			<div class="form-wrapper">
 				<form id="application-form">
-			
-				  <div class="row mb-3">
-					<div class="col-12">
-					  <input type="text" name="parent" class="form-control custom-input" placeholder="ФИО родителя" required>
+
+					<div class="row mb-3">
+						<div class="col-12">
+							<input type="text" name="parent" class="form-control custom-input"
+								placeholder="ФИО родителя" required>
+						</div>
 					</div>
-				  </div>
-			
-				  <div class="row mb-3">
-					<div class="col-md-6 mb-3 mb-md-0">
-					  <input type="tel" name="phone" class="form-control custom-input" placeholder="Телефон" required>
+
+					<div class="row mb-3">
+						<div class="col-md-6 mb-3 mb-md-0">
+							<input type="tel" name="phone" class="form-control custom-input" placeholder="Телефон"
+								required>
+						</div>
+						<div class="col-md-6">
+							<input type="email" name="email" class="form-control custom-input" placeholder="E-mail"
+								required>
+						</div>
 					</div>
-					<div class="col-md-6">
-					  <input type="email" name="email" class="form-control custom-input" placeholder="E-mail" required>
+
+					<div class="row mb-3">
+						<div class="col-md-6 mb-3 mb-md-0">
+							<input type="text" name="child" class="form-control custom-input" placeholder="Имя ребенка"
+								required>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="age" class="form-control custom-input"
+								placeholder="Возраст ребенка" required>
+						</div>
 					</div>
-				  </div>
-			
-				  <div class="row mb-3">
-					<div class="col-md-6 mb-3 mb-md-0">
-					  <input type="text" name="child" class="form-control custom-input" placeholder="Имя ребенка" required>
+
+					<div class="row mb-3">
+						<div class="col-md-6 mb-3 mb-md-0">
+							<select name="language" class="form-select custom-select" required>
+								<option selected disabled>Язык обучения</option>
+								<option value="Казахский">Казахский</option>
+								<option value="Русский">Русский</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<select name="class" class="form-select custom-select" required>
+								<option selected disabled>Выберите класс</option>
+								<option value="7">7 класс</option>
+								<option value="8">8 класс</option>
+								<option value="9">9 класс</option>
+								<option value="10">10 класс</option>
+							</select>
+						</div>
 					</div>
-					<div class="col-md-6">
-					  <input type="text" name="age" class="form-control custom-input" placeholder="Возраст ребенка" required>
+
+					<div class="note">
+						Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.
 					</div>
-				  </div>
-			
-				  <div class="row mb-3">
-					<div class="col-md-6 mb-3 mb-md-0">
-					  <select name="language" class="form-select custom-select" required>
-						<option selected disabled>Язык обучения</option>
-						<option value="Казахский">Казахский</option>
-						<option value="Русский">Русский</option>
-					  </select>
+
+					<div class="text-center mt-4">
+						<button type="submit" class="btn btn-submit">Отправить заявку</button>
 					</div>
-					<div class="col-md-6">
-					  <select name="class" class="form-select custom-select" required>
-						<option selected disabled>Выберите класс</option>
-						<option value="7">7 класс</option>
-						<option value="8">8 класс</option>
-						<option value="9">9 класс</option>
-						<option value="10">10 класс</option>
-					  </select>
-					</div>
-				  </div>
-			
-				  <div class="note">
-					Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.
-				  </div>
-			
-				  <div class="text-center mt-4">
-					<button type="submit" class="btn btn-submit">Отправить заявку</button>
-				  </div>
 				</form>
-			
+
 				<div class="loader" id="loader"></div>
 				<div class="success-message" id="success-message">Заявка успешно отправлена!</div>
-			  </div>
+			</div>
 		</div>
 
 	</section>
@@ -340,44 +358,45 @@
 		<div class="container my-5">
 			<h2>НАШИ КОНТАКТЫ</h2>
 			<div class="row">
-			  <!-- Левая колонка с текстом -->
-			  <div class="col-md-5">
-				<div class="contact-block">
-				  <div class="school-name">SILICON STEPPE SCHOOL</div>
-				  <div class="contact-info">
-					<p>Проспект Республики, 58/1а<br>г. Астана<br>Казахстан</p>
-		
-					<p><strong>E-mail</strong>info@steppe.edu.kz</p>
-		
-					<div class="bus-section">
-					  <span><strong>Автобус</strong></span>
-					  <i class="fas fa-bus"></i>
+				<!-- Левая колонка с текстом -->
+				<div class="col-md-5">
+					<div class="contact-block">
+						<div class="school-name">SILICON STEPPE SCHOOL</div>
+						<div class="contact-info">
+							<p>Проспект Республики, 58/1а<br>г. Астана<br>Казахстан</p>
+
+							<p><strong>E-mail</strong>info@steppe.edu.kz</p>
+
+							<div class="bus-section">
+								<span><strong>Автобус</strong></span>
+								<i class="fas fa-bus"></i>
+							</div>
+							<div class="bus-number">37</div>
+
+							<p><strong>Остановка</strong> Астана технопарк</p>
+						</div>
+
+						<div class="socials">
+							<a href="#">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-telegram"></i>
+							</a>
+						</div>
 					</div>
-					<div class="bus-number">37</div>
-		
-					<p><strong>Остановка</strong> Астана технопарк</p>
-				  </div>
-		
-				  <div class="socials">
-					<a href="#">
-					  <i class="fab fa-whatsapp"></i>
-					</a>
-					<a href="#">
-					  <i class="fab fa-instagram"></i>
-					</a>
-					<a href="#">
-					  <i class="fab fa-telegram"></i>
-					</a>
-				  </div>
 				</div>
-			  </div>
-		
-			  <!-- Правая колонка с картой (iframe вставите сами) -->
-			  <div class="col-md-7">
-				<iframe src="https://your-2gis-map-url.com" width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
-			  </div>
+
+				<!-- Правая колонка с картой (iframe вставите сами) -->
+				<div class="col-md-7">
+					<iframe src="https://your-2gis-map-url.com" width="100%" height="400" style="border:0;"
+						allowfullscreen loading="lazy"></iframe>
+				</div>
 			</div>
-		  </div>
+		</div>
 	</section>
 
 	<footer>
