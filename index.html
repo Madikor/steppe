@@ -74,8 +74,8 @@
 	<section class="about-school py-5" id="about">
 		<div class="container">
 			<div class="row">
-				<div class="col-8 col-12">
-					<h2>О ШКОЛЕ</h2>
+				<div class="col-md-8 col-12">
+					<h2 class="title">О ШКОЛЕ</h2>
 					<div class="about-text">
 						<p><strong>Steppe School</strong> — это образовательная экосистема, где сочетаются
 							фундаментальные науки, современные технологии, инженерные разработки, программирование и
@@ -87,7 +87,7 @@
 							креативное мышление, и командную</p>
 					</div>
 				</div>
-				<div class="col-4 col-12 text-center">
+				<div class="col-md-4 col-12 text-center">
 					<img src="img/Изображение 2.jpg" alt="ученица" class="rounded-4">
 				</div>
 			</div>
@@ -96,7 +96,7 @@
 
 	<section class="school-advantages py-5" id="advantages">
 		<div class="container">
-			<h2>ПРЕИМУЩЕСТВА НАШЕЙ ШКОЛЫ</h2>
+			<h2 class="title jc-center">ПРЕИМУЩЕСТВА НАШЕЙ ШКОЛЫ</h2>
 			<div class="row g-4 mt-4 advantages-list">
 				<div class="col-md-6">
 					<div class="advantage-item p-3 d-flex">
@@ -283,80 +283,80 @@
 			</div>
 	</section>
 
-	<section class="py-5" id="registration">
+	<section class="py-3" id="registration">
 		<div class="container">
-			<h2>ПОДАТЬ ЗАЯВКУ</h2>
+			<div class="registration-block">
 
-			<div class="form-wrapper">
-				<form id="application-form">
-
-					<div class="row mb-3">
-						<div class="col-12">
-							<input type="text" name="parent" class="form-control custom-input"
-								placeholder="ФИО родителя" required>
+				<div class="form-wrapper">
+					<form id="application-form">
+						<h2 class="title jc-center">ПОДАТЬ ЗАЯВКУ</h2>
+						<div class="row mb-3">
+							<div class="col-12">
+								<input type="text" name="parent" class="form-control custom-input"
+									placeholder="ФИО родителя" required>
+							</div>
 						</div>
-					</div>
 
-					<div class="row mb-3">
-						<div class="col-md-6 mb-3 mb-md-0">
-							<input type="tel" name="phone" class="form-control custom-input" placeholder="Телефон"
-								required>
+						<div class="row mb-3">
+							<div class="col-md-6 mb-3 mb-md-0">
+								<input type="tel" name="phone" class="form-control custom-input" placeholder="Телефон"
+									required>
+							</div>
+							<div class="col-md-6">
+								<input type="email" name="email" class="form-control custom-input" placeholder="E-mail"
+									required>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<input type="email" name="email" class="form-control custom-input" placeholder="E-mail"
-								required>
-						</div>
-					</div>
 
-					<div class="row mb-3">
-						<div class="col-md-6 mb-3 mb-md-0">
-							<input type="text" name="child" class="form-control custom-input" placeholder="Имя ребенка"
-								required>
+						<div class="row mb-3">
+							<div class="col-md-6 mb-3 mb-md-0">
+								<input type="text" name="child" class="form-control custom-input"
+									placeholder="Имя ребенка" required>
+							</div>
+							<div class="col-md-6">
+								<input type="text" name="age" class="form-control custom-input"
+									placeholder="Возраст ребенка" required>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<input type="text" name="age" class="form-control custom-input"
-								placeholder="Возраст ребенка" required>
+
+						<div class="row mb-3">
+							<div class="col-md-6 mb-3 mb-md-0">
+								<select name="language" class="form-select custom-select" required>
+									<option selected disabled>Язык обучения</option>
+									<option value="Казахский">Казахский</option>
+									<option value="Русский">Русский</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<select name="class" class="form-select custom-select" required>
+									<option selected disabled>Выберите класс</option>
+									<option value="7">7 класс</option>
+									<option value="8">8 класс</option>
+									<option value="9">9 класс</option>
+									<option value="10">10 класс</option>
+								</select>
+							</div>
 						</div>
-					</div>
 
-					<div class="row mb-3">
-						<div class="col-md-6 mb-3 mb-md-0">
-							<select name="language" class="form-select custom-select" required>
-								<option selected disabled>Язык обучения</option>
-								<option value="Казахский">Казахский</option>
-								<option value="Русский">Русский</option>
-							</select>
+						<div class="note">
+							Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.
 						</div>
-						<div class="col-md-6">
-							<select name="class" class="form-select custom-select" required>
-								<option selected disabled>Выберите класс</option>
-								<option value="7">7 класс</option>
-								<option value="8">8 класс</option>
-								<option value="9">9 класс</option>
-								<option value="10">10 класс</option>
-							</select>
+
+						<div class="text-center mt-4">
+							<button type="submit" class="btn btn-submit">Отправить заявку</button>
 						</div>
-					</div>
+					</form>
 
-					<div class="note">
-						Примечание: Заявки на обучение в 11 класс сроком на 1 год не принимаются.
-					</div>
-
-					<div class="text-center mt-4">
-						<button type="submit" class="btn btn-submit">Отправить заявку</button>
-					</div>
-				</form>
-
-				<div class="loader" id="loader"></div>
-				<div class="success-message" id="success-message">Заявка успешно отправлена!</div>
+					<div class="loader" id="loader"></div>
+					<div class="success-message" id="success-message">Заявка успешно отправлена!</div>
+				</div>
 			</div>
 		</div>
-
 	</section>
 
-	<section class="py-5" id="contacts">
-		<div class="container my-5">
-			<h2>НАШИ КОНТАКТЫ</h2>
+	<section class="py-3" id="contacts">
+		<div class="container mb-5">
+			<h2 class="title">НАШИ КОНТАКТЫ</h2>
 			<div class="row">
 				<!-- Левая колонка с текстом -->
 				<div class="col-md-5">

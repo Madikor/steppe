@@ -12,7 +12,7 @@ document.getElementById("application-form").addEventListener("submit", async fun
     const data = Object.fromEntries(formData.entries());
   
     try {
-      const response = await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbz6uPNAmRu_S3dZFH8FOYGCqE2LpgywLX83NZBjOG90TMONNwZ1sW16bsh9ycaffbEYWg/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -39,4 +39,21 @@ document.getElementById("application-form").addEventListener("submit", async fun
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('active');
   }
+
+  const tabContainer = document.getElementById('schoolTabs');
+
+  document.querySelectorAll('#schoolTabs .nav-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(() => {
+        const activeBtn = document.querySelector('#schoolTabs .nav-link.active');
+        if (activeBtn) {
+          activeBtn.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+          });
+        }
+      }, 100);
+    });
+  });
   
