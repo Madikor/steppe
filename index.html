@@ -288,7 +288,7 @@
 			<div class="registration-block">
 
 				<div class="form-wrapper">
-					<form id="application-form">
+					<form name="registration" id="application-form">
 						<h2 class="title jc-center">ПОДАТЬ ЗАЯВКУ</h2>
 						<div class="row mb-3">
 							<div class="col-12">
@@ -348,7 +348,20 @@
 					</form>
 
 					<div class="loader" id="loader"></div>
-					<div class="success-message" id="success-message">Заявка успешно отправлена!</div>
+
+					<div class="text-center my-4">
+						<div class="spinner-border text-danger js-loading d-none" role="status">
+							<span class="visually-hidden">Загрузка...</span>
+						</div>
+
+						<div class="alert alert-success js-success-message d-none fade" role="alert">
+							Заявка успешно отправлена!
+						</div>
+
+						<div class="alert alert-danger js-error-message d-none fade" role="alert">
+							Произошла ошибка. Попробуйте позже.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

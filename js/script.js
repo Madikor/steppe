@@ -1,39 +1,50 @@
-document.getElementById("application-form").addEventListener("submit", async function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzwhCcEFGzDg9hkTVSfmD6JU8_zdo91vk2zkYIPfMnAggQulay1xt4iQ_jIVO5sNc2jvQ/exec';
+  const form = document.forms['registration'];
+  const loading = document.querySelector('.js-loading');
+  const successMessage = document.querySelector('.js-success-message');
+  const errorMessage = document.querySelector('.js-error-message');
+
+  form.addEventListener('submit', e => {
     e.preventDefault();
-  
-    const form = e.target;
-    const loader = document.getElementById("loader");
-    const successMessage = document.getElementById("success-message");
-  
-    form.style.display = "none";
-    loader.style.display = "block";
-  
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-  
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbz6uPNAmRu_S3dZFH8FOYGCqE2LpgywLX83NZBjOG90TMONNwZ1sW16bsh9ycaffbEYWg/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
+    showLoadingIndicator();
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (response.ok) {
+          showSuccessMessage();
+        } else {
+          throw new Error('Ошибка отправки');
         }
+      })
+      .catch(error => {
+        showErrorMessage(error);
       });
-  
-      if (response.ok) {
-        loader.style.display = "none";
-        successMessage.style.display = "block";
-      } else {
-        alert("Ошибка при отправке. Попробуйте позже.");
-        form.style.display = "block";
-        loader.style.display = "none";
-      }
-    } catch (error) {
-      alert("Ошибка сети. Проверьте подключение к интернету.");
-      form.style.display = "block";
-      loader.style.display = "none";
-    }
   });
+
+  function showLoadingIndicator() {
+    loading.classList.remove('d-none');
+    successMessage.classList.add('d-none');
+    errorMessage.classList.add('d-none');
+  }
+
+  function showSuccessMessage() {
+    loading.classList.add('d-none');
+    form.classList.add('opacity-0');
+    setTimeout(() => {
+      form.style.display = 'none';
+      successMessage.classList.remove('d-none');
+      successMessage.classList.add('show');
+    }, 300);
+  }
+
+  function showErrorMessage(error) {
+    console.error('Ошибка:', error);
+    loading.classList.add('d-none');
+    errorMessage.classList.remove('d-none');
+    errorMessage.classList.add('show');
+  }
+});
 
   function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
