@@ -77,6 +77,28 @@ nav a {
   font-weight: bold;
 }
 
+.language-switcher .btn {
+  background-color: var(--accent-color, #f5664a);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.language-switcher .dropdown-menu {
+  background-color: var(--accent-color, #f5664a);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none !important;
+  }
+}
+
 .burger {
   cursor: pointer;
   color: #333;
