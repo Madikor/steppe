@@ -77,27 +77,27 @@ nav a {
   font-weight: bold;
 }
 
-.language-switcher .btn {
-  background-color: var(--accent-color, #f5664a);
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-.language-switcher .dropdown-menu {
-  background-color: var(--accent-color, #f5664a);
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-@media (max-width: 768px) {
-  nav {
-    display: none !important;
+  .lang-switcher {
+    position: relative;
   }
-}
+  .lang-switcher .lang-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #f5664a;
+    font-weight: bold;
+    white-space: nowrap;
+    display: none;
+    z-index: 1000;
+  }
+  .lang-switcher:hover .lang-dropdown {
+    display: block;
+  }
 
 .burger {
   cursor: pointer;
